@@ -1,0 +1,9 @@
+[
+  {lesson 1, start 0800, end 0845},
+  {lesson 2, start 0855, end 0940},
+  {lesson 3, start 1000, end 1045},
+  {lesson 4, start 1055, end 1140},
+  {lesson 5, start 1200, end 1245},
+  {lesson 6, start 1255, end 1340},
+  {lesson 7, start 1350, end 1435}
+]

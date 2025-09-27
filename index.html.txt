@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Школа №8 им. В. Комарова</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Общеобразовательная школа №8 имени В. Комарова</h1>
+    <p>г. Арыс, Туркестанская область</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="announcements.html">Объявления</a></li>
+      <li><a href="schedule.html">Расписание уроков</a></li>
+      <li><a href="bell-schedule.html">Расписание звонков</a></li>
+      <li><a href="news.html">Новости недели</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p>Добро пожаловать на официальный сайт школы №8!</p>
+    <p>Здесь вы найдёте актуальные объявления, расписание уроков и звонков, а также новости школьной жизни.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Школа №8 им. В. Комарова, г. Арыс</p>
+  </footer>
+</body>
+</html>

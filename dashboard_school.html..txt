@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школьный Дашборд 2025-2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #3498DB;
+            --secondary-green: #2ECC71;
+            --accent-orange: #E67E22;
+            --dark-blue: #2C3E50;
+            --light-gray: #ECF0F1;
+            --text-dark: #34495E;
+            --bg-light: #F0F4F8;
+            --bg-main-dashboard: #EAF2F8; /* Светло-голубой/Светло-зеленый */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--bg-main-dashboard);
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3.5em; /* Крупный, жирный шрифт */
+            font-weight: 900;
+            color: var(--dark-blue);
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .year {
+            font-size: 1.4em;
+            color: var(--text-dark);
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        .nav-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .nav-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 700;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px; /* Полоска сверху */
+            background-color: var(--primary-blue); /* Цвет по умолчанию */
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button.schedule-btn::before { background-color: var(--primary-blue); }
+        .nav-button.students-btn::before { background-color: var(--secondary-green); }
+        .nav-button.grades-btn::before { background-color: var(--accent-orange); }
+        .nav-button.calendar-btn::before { background-color: #9B59B6; /* Фиолетовый */ }
+        .nav-button.plan-btn::before { background-color: var(--dark-blue); }
+
+        .nav-button span {
+            z-index: 1;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .summary-card {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .summary-card .value {
+            font-size: 3em;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .summary-card .label {
+            font-size: 1.1em;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #7F8C8D;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .year {
+                font-size: 1.2em;
+            }
+            .nav-button {
+                font-size: 1.1em;
+                padding: 20px 15px;
+            }
+            .summary-card .value {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/100/3498DB/FFFFFF?text=ЛОГО" alt="Логотип школы" class="logo">
+            <h1>Средняя школа №X <br> имени В. Комарова</h1>
+            <p class="year">2025-2026 учебный год</p>
+        </header>
+
+        <section class="nav-buttons">
+            <a href="#расписание" class="nav-button schedule-btn"><span>Расписание уроков</span></a>
+            <a href="#ученики" class="nav-button students-btn"><span>Список учеников</span></a>
+            <a href="#успеваемость" class="nav-button grades-btn"><span>Журнал успеваемости</span></a>
+            <a href="#календарь" class="nav-button calendar-btn"><span>Календарь событий</span></a>
+            <a href="#вшк" class="nav-button plan-btn"><span>План ВШК</span></a>
+        </section>
+
+        <section class="summary-grid">
+            <div class="summary-card">
+                <div class="value">540</div>
+                <div class="label">Всего учеников</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">45</div>
+                <div class="label">Всего учителей</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">18</div>
+                <div class="label">Всего классов</div>
+            </div>
+            <div class="summary-card">
+                <div class="value">95%</div>
+                <div class="label">Успеваемость (на 1 полугодие)</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025-2026 Средняя школа №X им. В. Комарова. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JS для имитации переходов между "вкладками"
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // В реальном приложении здесь будет загрузка содержимого
+                // или переключение видимости блоков
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                console.log(`Переход к разделу: ${targetId}`);
+                // Для демонстрации, можно просто прокрутить до якоря, если блоки существуют
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+                // В реальном SPA здесь можно было бы менять содержимое
+                // или показывать/скрывать соответствующие div-ы
+                alert(`Вы перешли в раздел "${this.querySelector('span').textContent}".\nВ реальной системе здесь будет отображаться содержимое этой вкладки.`);
+            });
+        });
+    </script>
+</body>
+</html>
